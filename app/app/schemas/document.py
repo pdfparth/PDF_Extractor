@@ -1,11 +1,7 @@
 from typing import Optional
 
-from pydantic import BaseModel, AnyUrl
+from pydantic import BaseModel
 
-
-# class DocumentCreate(BaseModel):
-#     assistant_token: str
-#     link: AnyUrl
 
 class DocumentResponse(BaseModel):
     success: bool

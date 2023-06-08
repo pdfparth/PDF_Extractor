@@ -81,21 +81,9 @@ class Settings(BaseSettings):
         )
 
     EMAIL_TEST_USER: EmailStr = "test@example.com"  # type: ignore
-    FIRST_SUPERUSER: EmailStr = "aakash@teaminnovatics.com"
+    FIRST_SUPERUSER: EmailStr = "teams@threemuskiteers.com"
     FIRST_SUPERUSER_PASSWORD: str = "test@123"
     USERS_OPEN_REGISTRATION: bool = False
-
-    OPENAI_API_KEY: str = os.getenv("OPENAI_API_KEY")
-    SENDGRID_API_KEY: str = os.getenv("SENDGRID_API_KEY")
-    SENDGRID_FROM_ACCOUNT: str = os.getenv("SENDGRID_FROM_ACCOUNT")
-    OTP_VALIDITY_MINUTES: int = 10
-    CHROMA_DB_PATH: str = os.getenv("CHROMA_DB_PATH")
-    FREE_USAGE_TOKENS: int = os.getenv("FREE_USAGE_TOKENS")
-    REDIS_HOST: str = os.getenv("REDIS_HOST")
-    DOCUMENT_MAIN_FOLDER: str = os.getenv("DOCUMENT_MAIN_FOLDER")
-
-    ODOO_BASE_URI: str = os.getenv("ODOO_BASE_URI")
-    SCRAPPY_URL:str = os.getenv("SCRAPPY_URL")
 
     class Config:
         case_sensitive = True

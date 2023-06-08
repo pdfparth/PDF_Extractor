@@ -26,14 +26,6 @@ class BaseMixin:
     def updated_by(cls):
         return Column('updated_by', Integer, ForeignKey('user.id'))
 
-    # @declared_attr
-    # def creator(cls):
-    #    return relationship("User", foreign_keys=[BaseMixin.created_by])
-
-    # @declared_attr
-    # def updater(cls):
-    #    return relationship("User", foreign_keys=[BaseMixin.updated_by])
-
     created_at = Column(DateTime, default=datetime.utcnow)
     updated_at = Column(DateTime)
     is_deleted = Column(Boolean, default=False)

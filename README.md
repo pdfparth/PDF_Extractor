@@ -26,10 +26,10 @@ cd project_name
 ### Poetry install (python3.11)
 poetry install
 
-### Optionally there is also `requirements-dev.txt` file
+### Optionally there is also `requirements.txt` file
 python3.11 -m venv venv
 source venv/bin/activate
-pip install -r requirements-dev.txt
+pip install -r requirements.txt
 ```
 
 Note, be sure to use `python3.11` with this template with either poetry or standard venv & pip, if you need to stick to some earlier python version, you should adapt it yourself (remove new versions specific syntax for example `str | int` for python < 3.10 or `tomllib` for python < 3.11)

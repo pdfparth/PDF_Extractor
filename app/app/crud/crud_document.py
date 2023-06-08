@@ -2,30 +2,18 @@
 
 """
 # Built-in libraries
-import os
 import shutil
-import asyncio
-from datetime import datetime
 
 # third party libraries
 import PyPDF2
 import tempfile
-from sqlalchemy import func
 from sqlalchemy.orm import Session
 
 # custom libraries
-from app import crud
-from app.core.config import settings
 from app.models.document_metadata import Document
 
 
 class CRUDDocument:
-    """"""
-
-    def __init__(self):
-        pass
-     
-
     def extract_text_from_pdf(self, file):
         text = ""
         temp_file = tempfile.NamedTemporaryFile()
@@ -42,8 +30,7 @@ class CRUDDocument:
         return text
 
 
-    def create_file_text(self, db: Session,file) -> dict:
-        
+    def create_file_text(self, db: Session,file) -> dict:        
         if not file.filename.endswith(".pdf") :
             return {'success': False, 'msg': 'Something went wrong','data': ""}
             
