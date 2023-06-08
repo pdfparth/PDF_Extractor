@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.env
+.idea/
+chromadb/
+app/app/files/
+app/alembic/versions
+venv
+env/
